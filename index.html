@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>interfaces TIC</title>
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="img/logo.png" style="width: 20%;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Página de inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Archivo HCUE </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ingresar/salir </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <br />
+    <div class="container">
+      <section class="row">
+        <div class="col-md-12">
+          <h1 class="text-center">(F01)Factores de riesgo para Hipoacusia.</h1>
+          <p class="text-center">Adaptado de Guía GATI-HNIR, Ministerio de salud de Colombia</p>
+        </div>
+        <!-- INFOB1 -->
+      </section>
+      <hr><br />
+      <section class="row">
+        <section class="col-md-12">
+          <h3>Datos basicos</h3>
+          <p></p>
+        </section><div class="col-md-8">
+          <div class="form-group">
+            <label for="nombreCompleto">Nombre profesional tratante: *</label>
+            <input type="text" class="form-control" id="nombreCompleto" maxlength="128" placeholder="Nombre Completo" required>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form_group">
+            <label for="edadEncuestado">Num. id y tarjeta profesional: *</label>
+            <input type="number" class="form-control" id="edadEncuestado" placeholder="numero" maxlength="3" required/>
+          </div>
+        </div>
+      </section>
+      <section class="row">
+        <section class="col-md-12">
+          <section class="row">
+            <div class="col-md-4">
+              <label for="tipoAtencion">Tipo de Atención: *</label>
+              <select class="form-control" id="tipoAtencion">
+              <option value="ce">Consulta Externa</option>
+              <option value="farm">Farmacia</option>
+              <option value="fisi">Fisioterapia</option>
+              <option value="fo">F.A.</option>
+              <option value="hosp">Hospitalizació</option>
+              <option value="odon">Odontologia</option>
+              <option value="pyp">Promoción y Prevención</option>
+              <option value="rx">Rayos X</option>
+              <option value="urge">Urgencias</option>
+            </select>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="fechaActual">Fecha Actual: *</label>
+                <input type="date" class="form-control" id="fechaActual" required>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="fechaActencion">Fecha Atención: *</label>
+                <input type="date" class="form-control" id="fechaAtencion" required>
+              </div>
+            </div>
+          </section>
+          <!-- INFOB2 -->
+          <section class="row">
+            <div class="col-md-8">
+              <div class="form-group">
+                <label for="nombreCompleto">Nombre Completo (usuario): *</label>
+                <input type="text" class="form-control" id="nombreCompleto" maxlength="128" placeholder="Nombre Completo" required>
+              </div>
+              <section class="row">
+          <section class="col-md-12">
+            <section class="row">
+              <div class="col-md-4">
+                <label for="tipoAtencion">Género: *</label>
+                <select class="form-control" id="tipoAtencion">
+                <option value="ce">Masculino</option>
+                <option value="farm">Femenino</option>
+                <option value="fisi">no binario</option>               
+              </select>
+              </div> <div class="col-md-8">
+                <label for="telefono">Tipo y número de Identificación: *</label>
+                <input type="text" class="form-control" id="email" placeholder="cc+número, t.i.+número etc." maxlength="12" required/>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form_group">
+                <label for="edadEncuestado">Edad: *</label>
+                <input type="number" class="form-control" id="edadEncuestado" placeholder="Edad" maxlength="3" required/>
+              </div>
+            </div>
+          </section>
+          <section class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="idIdentificacion">correo electronico: *</label>
+                <input type="number" id="idIdentificacion" class="form-control" placeholder="Numero de Identificación" maxlength="35" required/>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="telefono">Telefono: *</label>
+              <input type="text" class="form-control" id="telefono" placeholder="Numero Telefonico" maxlength="12" required/>
+            </div>
+            <div class="col-md-4">
+              <label for="epsPaciente">EPS: *</label>
+              <input type="text" class="form-control" id="epsPaciente" placeholder= "EPS del Paciente" required />
+            </div>
+          </section>
+        </section>
+      </section>
+      <hr />
+  
+      <!-- Factores ambientales  -->
+      <section class="row">
+        <div class="col-md-12">
+          <h3>Factores Ambientales.</h3>
+          <p></p>
+        </div>
+      </section>
+      <!--  PREGUNTA 1  -->
+      <section class="row">
+        <div class="col-md-6">
+          <p>1- ¿"podria mencionar la fecha de la última medicion de expocisión a ruido en su puesto de trabajo?</p>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type="radio" name="pregunta1" id="pregunta1a" value="SI"> Si
+        </label>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type="radio" name="pregunta1" id="preguntab" value="NO"> No
+        </label>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type=type="text" class="form-control" id="¿Cuales?" maxlength="128" placeholder="¿Cuales?" required>
+        </label>
+        </div>
+      </section>
+      <section class="row">
+        <div class="col-md-6">
+          <p>1.1- ¿Se encuentra expuesto a agentes toxicos o irritantes en su ambiente de trabajo?</p>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type="radio" name="pregunta1" id="pregunta1a" value="SI"> Si
+        </label>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type="radio" name="pregunta1" id="preguntab" value="NO"> No
+        </label>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type=type="text" class="form-control" id="¿Cuales?" maxlength="128" placeholder="¿Cuales?" required>
+        </label>
+        </div>
+      </section>
+      <section class="row">
+        <div class="col-md-6">
+          <p>1.2- ¿En su puesto de trabajo, se encuentra expuesto a ruidos fuertes o constantes?</p>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type="radio" name="pregunta1" id="pregunta1a" value="SI"> Si
+        </label>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type="radio" name="pregunta1" id="preguntab" value="NO"> No
+        </label>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type=type="text" class="form-control" id="¿Cuales?" maxlength="128" placeholder="¿Cuales?" required>
+        </label>
+        </div>
+      </section>
+      <section class="row">
+        <div class="col-md-6">
+          <p>1.3- ¿Utiliza algún tipo de protección auditiva en los casos de exposición a ruidos fuertes o constantes?</p>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type="radio" name="pregunta1" id="pregunta1a" value="SI"> Si
+        </label>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type="radio" name="pregunta1" id="preguntab" value="NO"> No
+        </label>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type=type="text" class="form-control" id="¿Cuales?" maxlength="128" placeholder="¿Cuales?" required>
+        </label>
+        </div>
+      </section>
+      <!--  PREGUNTA 2  -->
+      <section class="row">
+        <div class="col-md-6">
+          <p>2- ¿dispone de valoración por audiometría en el último año? </p>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type="radio" name="pregunta1" id="pregunta1a" value="SI"> Si
+        </label>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type="radio" name="pregunta1" id="preguntab" value="NO"> No
+        </label>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type=type="text" class="form-control" id="¿Cuales?" maxlength="128" placeholder="¿Cuales?" required>
+        </label>
+        </div>
+      </section>
+      <!--  PREGUNTA 3  -->
+      <section class="row">
+        <div class="col-md-6">
+          <p>3- ¿Considera que en su puesto de trabajo tiene dificultades para comprender cuando le hablan en determinadas situaciones? </p>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type="radio" name="pregunta1" id="pregunta1a" value="SI"> Si
+        </label>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type="radio" name="pregunta1" id="preguntab" value="NO"> No
+        </label>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type=type="text" class="form-control" id="¿Cuales?" maxlength="128" placeholder="¿Cuales?" required>
+        </label>
+        </div>
+      </section>
+      <!--  PREGUNTA 4  -->
+      <section class="row">
+        <div class="col-md-6">
+          <p>4- ¿Sabe usted cómo pedir una cita para reportar molestias o sintomas de enfermedad a un profesional de salud y cuál es el medio de comunicación no presencial del que dispone su asegurador?</p>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type="radio" name="pregunta1" id="pregunta1a" value="SI"> Si
+        </label>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type="radio" name="pregunta1" id="preguntab" value="NO"> No
+        </label>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type=type="text" class="form-control" id="¿Cuales?" maxlength="128" placeholder="¿Cuales?" required>
+        </label>
+        </div>
+      </section><br>
+      <hr>
+      <!--  sintomas  -->
+      <section class="row">
+        <div class="col-md-12">
+          <h3>Sintomas.</h3>
+          <p></p>
+        </div>
+      </section>
+      <!--  PREGUNTA 5  -->
+      <section class="row">
+        <div class="col-md-6">
+          <p>5- ¿Siente o ha sentido molestias como dolor, comezón, picor en el oído?</p>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type="radio" name="pregunta1" id="pregunta1a" value="SI"> Si
+        </label>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type="radio" name="pregunta1" id="preguntab" value="NO"> No
+        </label>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type=type="text" class="form-control" id="¿Cuales?" maxlength="128" placeholder="¿Cuales?" required>
+        </label>
+        </div>
+      </section>
+      <!--  PREGUNTA 6  -->
+      <section class="row">
+        <div class="col-md-6">
+          <p>6- ¿Siente o ha sentido molestias como mareos, vertigos o pérdida del equilibrio?</p>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type="radio" name="pregunta1" id="pregunta1a" value="SI"> Si
+        </label>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type="radio" name="pregunta1" id="preguntab" value="NO"> No
+        </label>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type=type="text" class="form-control" id="¿Cuales?" maxlength="128" placeholder="¿Cuales?" required>
+        </label>
+        </div>
+      </section>
+      <!--  PREGUNTA 7  -->
+      <section class="row">
+        <div class="col-md-6">
+          <p>7- ¿Considera que algunas veces tiene dificultades para comprender lo que le dicen, o escucha en el telefono, TV etc.?</p>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type="radio" name="pregunta1" id="pregunta1a" value="SI"> Si
+        </label>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type="radio" name="pregunta1" id="preguntab" value="NO"> No
+        </label>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type=type="text" class="form-control" id="¿Cuales?" maxlength="128" placeholder="¿Cuales?" required>
+        </label>
+        </div>
+      </section>
+      <!--  PREGUNTA 8  -->
+      <section class="row">
+        <div class="col-md-6">
+          <p>8- ¿hay algunos sonidos que haya identificado le ocasionan molestía? </p>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type="radio" name="pregunta1" id="pregunta1a" value="SI"> Si
+        </label>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type="radio" name="pregunta1" id="preguntab" value="NO"> No
+        </label>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type=type="text" class="form-control" id="¿Cuales?" maxlength="128" placeholder="¿Cuales?" required>
+        </label>
+        </div>
+      </section>
+      <!--  PREGUNTA 9  -->
+      <section class="row">
+        <div class="col-md-6">
+          <p>9- ¿Tiene sensación de escuchar sonidos molestos en su oído, (tinnitus)?</p>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type="radio" name="pregunta1" id="pregunta1a" value="SI"> Si
+        </label>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type="radio" name="pregunta1" id="preguntab" value="NO"> No
+        </label>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type=type="text" class="form-control" id="¿Cuales?" maxlength="128" placeholder="¿Cuales?" required>
+        </label>
+        </div>
+      </section><br />
+      <hr />
+      <!--  Durante la Atención  -->
+      <section class="row">
+        <div class="col-md-12">
+          <h3>Antecedentes.</h3>
+          <p></p>
+        </div>
+      </section>
+      <!--  PREGUNTA 10  -->
+      <section class="row">
+        <div class="col-md-6">
+          <p>10- ¿Alguna vez a usted y/o a su familia le dieron las recomendaciones sobre cómo cuidar su salud auditiva en casa?</p>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type="radio" name="pregunta1" id="pregunta1a" value="SI"> Si
+        </label>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type="radio" name="pregunta1" id="preguntab" value="NO"> No
+        </label>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type=type="text" class="form-control" id="¿Cuales?" maxlength="128" placeholder="¿Cuales?" required>
+        </label>
+        </div>
+      </section>
+      <!--  PREGUNTA 11  -->
+      <section class="row">
+        <div class="col-md-6">
+          <p>11- ¿Ha tenido alguna valoración por fonoaudiología en el último año?</p>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type="radio" name="pregunta1" id="pregunta1a" value="SI"> Si
+        </label>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type="radio" name="pregunta1" id="preguntab" value="NO"> No
+        </label>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type=type="text" class="form-control" id="¿Cuales?" maxlength="128" placeholder="¿Cuales?" required>
+        </label>
+        </div>
+      </section>
+      <!--  PREGUNTA 12  -->
+      <section class="row">
+        <div class="col-md-6">
+          <p>12- ¿Ha sido diagnósticado con algúna enfermedad auditiva anteriotmente?</p>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type="radio" name="pregunta1" id="pregunta1a" value="SI"> Si
+        </label>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type="radio" name="pregunta1" id="preguntab" value="NO"> No
+        </label>
+        </div>
+        <div class="col-md-2">
+          <label class="radio">
+          <input type=type="text" class="form-control" id="¿Cuales?" maxlength="128" placeholder="¿Cuales?" required>
+        </label>
+        </div>
+      </section>
+  
+  
+      <br />
+      <hr />
+      <!--  percepción auditiva  -->
+      <section class="row">
+        <div class="col-md-12">
+          <h3>Percepción auditiva.</h3>
+          <p></p>
+        </div>
+      </section>
+      <!--  PREGUNTA 13  -->
+      <section class="row">
+        <div class="col-md-12">
+          <section class="row">
+            <div class="col-md-8">
+              <p>13- ¿Cómo calificaría su audición global respecto a su participación en diferentes actividades?</p>
+            </div>
+            <div class="col-md-4">
+              <select class="form-control" id="pregunta13">
+              <option value="5">Muy Buena</option>
+              <option value="4">Buena</option>
+              <option value="3">Regular</option>
+              <option value="2">Mala</option>
+              <option value="1">Muy Mala</option>
+              <option value="0">No Responde</option>
+            </select>
+            </div>
+          </section>
+        </div>
+      </section><br />
+      <!--  PREGUNTA 14  -->
+      <section class="row">
+        <div class="col-md-12">
+          <section class="row">
+            <div class="col-md-8">
+              <p>14- ¿Cómo considera su audición y la discriminación del lenguaje en situaciones con ruido de fondo?</p>
+            </div>
+            <div class="col-md-4">
+              <select class="form-control" id="pregunta14">
+              <option value="5">Muy Buena</option>
+              <option value="4">Buena</option>
+              <option value="3">Regular</option>
+              <option value="2">Mala</option>
+              <option value="1">Muy Mala</option>
+              <option value="0">No Responde</option>
+            </select>
+            </div>
+          </section>
+        </div>
+      </section><br />
+      <hr />
+  
+      <!--  Comentarios  -->
+      <section class="row">
+        <div class="col-md-12">
+          <h3>Comentarios.</h3>
+          <p></p>
+        </div>
+      </section>
+      <section class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="comment">Escriba aquí los comentarios al respecto de las preguntas que consideren necesitan explicación, serán tenidos en cuenta para su evaluación por el profesional:</label>
+            <textarea class="form-control" rows="6" id="comentarios"></textarea>
+          </div>
+        </div>
+      </section>
+      <section class="row">
+        <div class="col-md-12">
+          <button type="button" class="btn btn-info" id="saveForm" onclick="saveForm">Guardar Encuesta</button>
+          <button type="button" class="btn btn-danger" id="clearForm">Limpiar formulario</button>
+        </div>
+      </section>
+    </div>
+  
+    <br /><br />
+    
+  <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css'></script><script  src="./script.js"></script>
+  
+  </body>
+  </html>
+  
+      
+      
+    <!-- CONTACT -->
+    <section class="bg-light py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9">
+            <h3>Contacto 2FA</h3>
+            <p>
+              Contacto de usuario para acceso con Segundo Factor de autenticación HCUE-F01-P.
+            </p>
+            <form action="">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <i class="fas fa-user input-group-text"></i>
+                </div>
+                <input type="text" class="form-control" placeholder="Name" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <i class="fas fa-envelope input-group-text"></i>
+                </div>
+                <input type="text" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <i class="fas fa-pencil-alt input-group-text"></i>
+                </div>
+                <textarea name="" cols="30" rows="10" placeholder="Message" class="form-control"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Send</button>
+            </form>
+          </div>
+          <div class="col-lg-3 align-self-center">
+            <img src="img/logo.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container p-3">
+        <div class="row text-center text-white">
+          <div class="col ml-auto">
+            <p>Todos los derechos reservados para IWV SAS NIT 901429657-1 </p>
+      <p>e-mail: iwdelvalle@gmail.com Tel. (+57)-3217304857 </p> <p>Copyright &copy; 2021</p>
+          </div>
+        </div>
+      </div>       
+    </footer>
+
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  </body>
+</html>
